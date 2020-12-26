@@ -8,7 +8,7 @@ const Companies = () => {
         <div className="col-12 bg-secondary p-0 m-0 w-75">
           <h3 className="p-2">Companies</h3>
         </div>
-        <div className="col-10  mx-auto border p-0 m-2">
+        <div className="col-10  mx-auto  p-0 m-2">
           <CardCompanies />
         </div>
       </div>

@@ -10,7 +10,7 @@ const HomePage = () => {
         <div className="col-8  ">
           <Companies />
         </div>
-        <div className="col-4 bg-secondary">
+        <div className="col-4 ">
           <FormData />
         </div>
       </div>

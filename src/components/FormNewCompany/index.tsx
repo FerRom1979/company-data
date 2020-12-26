@@ -1,33 +1,82 @@
-import React, { ChangeEvent, useState } from 'react';
-
-interface NewCompanyInputProps {
-  // eslint-disable-next-line no-unused-vars
-  addCompany(company: string): void;
-}
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { useDispatch, useSelector } from 'react-redux';
+import { IFormCompanyData } from '../../types';
+import { addCompanyAction } from '../../Redux/Actions/index';
 
 // eslint-disable-next-line react/prop-types
-const FormCompany: React.FC<NewCompanyInputProps> = ({ addCompany }) => {
-  const [company, setCompany] = useState('');
+const FormCompany = () => {
+  const dispatch = useDispatch();
+  const companies = useSelector((state: any) => state.companies);
 
-  const updateCompany = (e: ChangeEvent<HTMLInputElement>) => {
-    setCompany(e.target.value);
+  const { register, handleSubmit, errors } = useForm<IFormCompanyData>();
+
+  const onSubmit = (data: any) => {
+    const newCompany = {
+      id: companies.length,
+      company: data.company,
+      address: data.address,
+      phone: data.phone,
+      workers: data.workers,
+    };
+    dispatch(addCompanyAction(newCompany));
   };
 
-  const onAddCompany = () => {
-    addCompany(company);
-    setCompany('');
-  };
   return (
-    <div>
-      <input
-        onChange={updateCompany}
-        value={company}
-        type="text"
-        name="company"
-        placeholder="Empresa"
-      />
+    <div className="container mt-4 bg-secondary">
+      <h3 className="text-center">Cargar Empresa</h3>
 
-      <button onClick={onAddCompany}>agregar empresa</button>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <input
+          name="company"
+          placeholder="company"
+          ref={register({
+            required: true,
+          })}
+          className="form-control my-2"
+        />
+        {errors.name && (
+          <span className="text-danger text-small d-block mb-2">This field is required</span>
+        )}
+        <input
+          name="address"
+          placeholder="address"
+          ref={register({ required: true })}
+          className="form-control my-2"
+        />
+
+        {errors.address && (
+          <span className="text-danger text-small d-block mb-2">This field is required</span>
+        )}
+        <input
+          name="phone"
+          placeholder="phone"
+          ref={register({ required: true })}
+          className="form-control my-2"
+        />
+
+        {errors.phone && (
+          <span className="text-danger text-small d-block mb-2">This field is required</span>
+        )}
+
+        <input
+          name="workers"
+          placeholder="workers"
+          ref={register({ required: true })}
+          className="form-control my-2"
+        />
+
+        {errors.workers && (
+          <span className="text-danger text-small d-block mb-2">This field is required</span>
+        )}
+
+        <button type="submit" className="btn btn-primary mr-2">
+          cargar
+        </button>
+        <button type="reset" className="btn btn-primary">
+          limpiar
+        </button>
+      </form>
     </div>
   );
 };

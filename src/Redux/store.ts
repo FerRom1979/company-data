@@ -1,4 +1,8 @@
 import { createStore } from 'redux';
-import { companyReducer } from './reducer/index';
+import reducer from './reducer/index';
 
-export const store = createStore(companyReducer);
+const initialState = {
+  companies: [],
+};
+
+export const store = createStore(reducer, initialState);
