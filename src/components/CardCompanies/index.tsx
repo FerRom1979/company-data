@@ -15,24 +15,30 @@ const CardCompanies = () => {
           <div className="card mb-3" style={{ width: '100%', height: '350px' }} key={index}>
             <div className="card-header">{item.company}</div>
             <div className="card-body">
-              <h5 className="card-title">Direccion</h5>
+              <h5 className="card-title">Dirección :</h5>
               <p className="card-text">{item.address}</p>
             </div>
             <div className="card-body">
-              <h5 className="card-title">Telefono</h5>
+              <h5 className="card-title">Teléfono :</h5>
               <p className="card-text">{item.phone}</p>
             </div>
             <div className="card-body">
-              <h5 className="card-title">Personal</h5>
+              <h5 className="card-title">Personal :</h5>
               <p className="card-text">{item.workers}</p>
             </div>
             <div className="card-footer d-flex justify-content-between">
               <Link to="/overview">
-                <button onClick={() => dispatch(getCompanyAction(item))}>
-                  Descriccion general de la empresa
+                <button
+                  className="btn btn-secondary"
+                  onClick={() => dispatch(getCompanyAction(item))}
+                >
+                  Más información
                 </button>
               </Link>
-              <button className="btn " onClick={() => dispatch(deleteCompanyAction(item.id))}>
+              <button
+                className="btn btn-secondary"
+                onClick={() => dispatch(deleteCompanyAction(item.id))}
+              >
                 Eliminar
               </button>
             </div>

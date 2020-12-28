@@ -22,15 +22,15 @@ const CerdEmployees = () => {
               style={{ width: '50%', height: '250px' }}
               key={index}
             >
-              <div className="card-header">{employee.name}</div>
+              <div className="card-header">Nombre : {employee.name}</div>
               <div className="card-body">
-                <h5 className="card-title">Direccion</h5>
+                <h5 className="card-title">Dirección :</h5>
                 <p className="card-text">{employee.address}</p>
               </div>
 
               <div className="card-footer d-flex justify-content-between">
                 <button
-                  className="btn "
+                  className="btn btn-secondary"
                   onClick={() => dispatch(deleteEmployeeAction(employee.id))}
                 >
                   Eliminar

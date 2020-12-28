@@ -11,7 +11,7 @@ const FormCompany = () => {
 
   const { register, handleSubmit, errors } = useForm<IFormCompanyData>();
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: IFormCompanyData, e: any) => {
     const newCompany = {
       id: companies.length,
       company: data.company,
@@ -20,6 +20,7 @@ const FormCompany = () => {
       workers: data.workers,
     };
     dispatch(addCompanyAction(newCompany));
+    e.target.reset();
   };
 
   return (
@@ -29,53 +30,48 @@ const FormCompany = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           name="company"
-          placeholder="company"
-          ref={register({
-            required: true,
-          })}
+          placeholder="empresa"
+          ref={register({ required: true })}
           className="form-control my-2"
         />
-        {errors.name && (
-          <span className="text-danger text-small d-block mb-2">This field is required</span>
+        {errors.company && (
+          <span className="text-danger text-small d-block mb-2">Este campo es requerido</span>
         )}
         <input
           name="address"
-          placeholder="address"
+          placeholder="dirección"
           ref={register({ required: true })}
           className="form-control my-2"
         />
 
         {errors.address && (
-          <span className="text-danger text-small d-block mb-2">This field is required</span>
+          <span className="text-danger text-small d-block mb-2">Este campo es requerido</span>
         )}
         <input
           name="phone"
-          placeholder="phone"
+          placeholder="teléfono"
+          type="number"
           ref={register({ required: true })}
           className="form-control my-2"
         />
 
         {errors.phone && (
-          <span className="text-danger text-small d-block mb-2">This field is required</span>
+          <span className="text-danger text-small d-block mb-2">Este campo es requerido</span>
         )}
 
         <input
           name="workers"
-          placeholder="workers"
+          placeholder="personal"
+          type="number"
           ref={register({ required: true })}
           className="form-control my-2"
         />
 
         {errors.workers && (
-          <span className="text-danger text-small d-block mb-2">This field is required</span>
+          <span className="text-danger text-small d-block mb-2">Este campo es requerido</span>
         )}
 
-        <button type="submit" className="btn btn-primary mr-2 mb-2">
-          cargar
-        </button>
-        <button type="reset" className="btn btn-primary mb-2">
-          limpiar
-        </button>
+        <input type="submit" className="btn btn-primary mr-2 mb-2 w-100" value="Cargar" />
       </form>
     </div>
   );

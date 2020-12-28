@@ -20,6 +20,7 @@ export interface IFormCompanyData {
   exampleRequired: string;
   phone: number;
   workers: number;
+  company: string;
 }
 
 export interface NewCompanyInputProps {
