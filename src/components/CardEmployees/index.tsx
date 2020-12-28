@@ -4,12 +4,17 @@ import { deleteEmployeeAction } from '../../Redux/Actions/index';
 
 const CerdEmployees = () => {
   const employee = useSelector((state: any) => state.employees);
+  const companyData = useSelector((state: any) => state.dataCompany);
+
   const dispatch = useDispatch();
+  const newEmployees = employee.filter((item: any) => item.company === companyData[0].company);
+  console.log(newEmployees);
+  console.log(companyData[0].company);
 
   return (
     <div>
       <>
-        {employee.map((employee: any, index: any) => {
+        {newEmployees.map((employee: any, index: any) => {
           return (
             // eslint-disable-next-line react/jsx-key
             <div
