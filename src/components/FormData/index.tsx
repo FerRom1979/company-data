@@ -4,7 +4,7 @@ import FormPerson from '../FormNewPerson/index';
 
 const FormData = () => {
   return (
-    <div>
+    <div className="container">
       <FormCompany />
 
       <FormPerson />
