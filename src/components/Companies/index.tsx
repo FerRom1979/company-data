@@ -6,7 +6,7 @@ const Companies = () => {
     <div className=" p-4 ">
       <div className="row border">
         <div className="col-12 bg-secondary p-0 m-0 w-75">
-          <h3 className="p-2">Companies</h3>
+          <h3 className="p-2">Empresas</h3>
         </div>
         <div className="col-10  mx-auto  p-0 m-2">
           <CardCompanies />
