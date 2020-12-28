@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Companies from '../Companies/index';
 import FormData from '../FormData/index';
 

@@ -70,10 +70,10 @@ const FormCompany = () => {
           <span className="text-danger text-small d-block mb-2">This field is required</span>
         )}
 
-        <button type="submit" className="btn btn-primary mr-2">
+        <button type="submit" className="btn btn-primary mr-2 mb-2">
           cargar
         </button>
-        <button type="reset" className="btn btn-primary">
+        <button type="reset" className="btn btn-primary mb-2">
           limpiar
         </button>
       </form>
