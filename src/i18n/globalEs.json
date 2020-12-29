@@ -1,0 +1,45 @@
+{
+  "homepage": {
+    "title": "Empresa",
+    "info": "Actualmente no hay empresas para revisar"
+  },
+  "companies": {
+    "title": "Empresas"
+  },
+  "cardcompanies": {
+    "title-address": "Dirección",
+    "title-phone": "Teléfono",
+    "title-staff": "Personal",
+    "button-overview": "Visión general",
+    "button-delete": "Borrar"
+  },
+  "cardemployees": {
+    "card-header": "Nombre",
+    "card-title": "Dirección",
+    "button-delete": "Eliminar"
+  },
+  "formCompany": {
+    "title-form": "Cargar empresa",
+    "input-company": "empresa",
+    "input-address": "dirección",
+    "input-phone": "teléfono",
+    "input-staff": "personal",
+    "button-save": "Cargar",
+    "error-message": "Este campo es requerido"
+  },
+  "formPersonal": {
+    "title-form": "Registrar personal",
+    "input-name": "nombre",
+    "input-address": "dirección",
+    "error-message-one": "Solo se admiten letras",
+    "error-message-two": "Este campo es requerido",
+    "button-save": "Cargar"
+  },
+  "overview": {
+    "title": "Informacion de la empresa",
+    "button-back": "volver",
+    "input-address": "Dirección",
+    "input-phone": "Teléfono",
+    "input-staff": "Personal"
+  }
+}
