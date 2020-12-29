@@ -1,0 +1,45 @@
+{
+  "homepage": {
+    "title": "Company",
+    "info": "There are currently no companies to review"
+  },
+  "companies": {
+    "title": "Companies"
+  },
+  "cardcompanies": {
+    "title-address": "Address",
+    "title-phone": "Phone",
+    "title-staff": "Staff",
+    "button-overview": "Overview",
+    "button-delete": "Delete"
+  },
+  "cardemployees": {
+    "card-header": "Name",
+    "card-title": "Address",
+    "button-delete": "Delete"
+  },
+  "formCompany": {
+    "title-form": "Load company",
+    "input-company": "company",
+    "input-address": "address",
+    "input-phone": "phone",
+    "input-staff": "staff",
+    "button-save": "save",
+    "error-message": "This field is required"
+  },
+  "formPersonal": {
+    "title-form": "Register staff",
+    "input-name": "name",
+    "input-address": "address",
+    "error-message-one": "only letters are allowed",
+    "error-message-two": "This field is required",
+    "button-save": "save"
+  },
+  "overview": {
+    "title": "Company information",
+    "button-back": "return",
+    "input-address": "Address",
+    "input-phone": "Phone",
+    "input-staff": "Staff"
+  }
+}
