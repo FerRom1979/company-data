@@ -2,6 +2,8 @@ import React from 'react';
 import CardEmployees from '../CardEmployees/index';
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReply } from '@fortawesome/free-solid-svg-icons';
 
 const Overview = () => {
   const companyData = useSelector((state: any) => state.dataCompany);
@@ -15,8 +17,11 @@ const Overview = () => {
     <>
       <header className="d-flex flex-row p-2 bg-primary">
         <h2>Información de la empresa</h2>
-        <button className="btn " onClick={() => goBack()}>
+        <button className="btn btn-outline-dark ml-2" onClick={() => goBack()}>
           volver
+          <span className="ml-2 ">
+            <FontAwesomeIcon icon={faReply} />
+          </span>
         </button>
       </header>
       <div className="fluid col border">
