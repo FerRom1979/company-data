@@ -25,7 +25,7 @@ const FormPerson = () => {
 
   return (
     <div className="container mt-4 bg-secondary my-4">
-      <h3 className="text-center">{t('formPersonal.title-form')}</h3>
+      <h3 className="text-center text-white">{t('formPersonal.title-form')}</h3>
 
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
