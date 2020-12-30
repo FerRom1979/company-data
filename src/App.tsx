@@ -1,12 +1,12 @@
 import React from 'react';
 import HomePage from './components/HomePage/index';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import Overview from './components/Overview/index';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <div className="fluid">
         <Switch>
           <Route exact path="/" component={HomePage} />
