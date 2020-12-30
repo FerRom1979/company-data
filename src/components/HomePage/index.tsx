@@ -18,7 +18,7 @@ const HomePage = () => {
     }
   };
   return (
-    <div className="fluid border vw-100 vh-100">
+    <div className="fluid border w-100 h-100">
       <div className="row ">
         <div className="col-12 bg-secondary d-flex justify-content-end py-2">
           <div className="mr-4">
