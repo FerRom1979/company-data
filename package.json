@@ -1,5 +1,5 @@
 {
-  "homepage": "http://FerRom1979.github.io/company-data",
+  "homepage": "https://FerRom1979.github.com/company-data",
   "name": "company-data",
   "version": "0.1.0",
   "private": true,
@@ -16,6 +16,7 @@
     "@types/react-router-dom": "^5.1.6",
     "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
+    "gh-pages": "^3.1.0",
     "i18next": "^19.8.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -66,7 +67,6 @@
     "@types/react-select": "^3.0.28",
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-prettier": "^3.3.0",
-    "gh-pages": "^3.1.0",
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
     "prettier": "2.2.1"
