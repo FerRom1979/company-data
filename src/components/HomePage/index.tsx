@@ -27,7 +27,7 @@ const HomePage = () => {
             </button>
           </div>
         </div>
-        <div className="col-8 ">
+        <div className="col-12 col-md-8">
           {company.length === 0 ? (
             <div className="mw-100 mh-100 m-auto">
               <h2 className="text-center mt-4">{t('homepage.info')}</h2>
@@ -38,7 +38,7 @@ const HomePage = () => {
             </div>
           )}
         </div>
-        <div className="col-4 ">
+        <div className="col-12 col-md-4">
           <FormData />
         </div>
       </div>

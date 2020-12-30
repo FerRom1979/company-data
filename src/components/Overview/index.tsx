@@ -26,11 +26,14 @@ const Overview = () => {
   };
   return (
     <>
-      <header className="d-flex flex-row p-2 bg-info justify-content-between">
-        <div className="d-flex">
-          <h2 className="text-center text-white">{t('overview.title')}</h2>
-          <div>
-            <button className="btn btn-outline-dark ml-2 text-white" onClick={() => goBack()}>
+      <header className="d-sm-flex flex-row p-2 bg-info justify-content-between">
+        <div className="d-sm-flex  ">
+          <h3 className=" text-center text-white ">{t('overview.title')}</h3>
+          <div className="m-auto">
+            <button
+              className="btn btn-outline-dark ml-2 text-white m-auto"
+              onClick={() => goBack()}
+            >
               {t('overview.button-back')}
               <span className="ml-2 ">
                 <FontAwesomeIcon icon={faReply} />
@@ -38,7 +41,7 @@ const Overview = () => {
             </button>
           </div>
         </div>
-        <div>
+        <div className="pr-0">
           <button className="btn btn-outline-dark  text-white " onClick={() => onChangeLanguage()}>
             EN/ES
           </button>
